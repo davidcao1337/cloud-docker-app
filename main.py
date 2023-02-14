@@ -4,12 +4,12 @@ import socket
 import functions
 
 # 4a: List name of all the text file at location
-dir_path = "data"
+dir_path = "./data"
 txt_files_list = functions.get_txt_files(dir_path)
 
 # 4b: Read the two text files and count total number of words in each text files
-txt_path_1 = "data/Limerick.txt"
-txt_path_2 = "data/IF.txt"
+txt_path_1 = "./data/Limerick.txt"
+txt_path_2 = "./data/IF.txt"
 word_count_1 = functions.word_count(txt_path_1)
 word_count_2 = functions.word_count(txt_path_2)
 
@@ -23,7 +23,7 @@ top_three_words = functions.top_three_words(txt_path_2)
 ip_addr = functions.get_ip_addr(socket.gethostname())
 
 # 4f: Write all the output to a text file at location
-output_file = open("result.txt", "w+")
+output_file = open("./output/result.txt", "w+")
 
 output_file.write("List of all text files:\n")
 for file in txt_files_list:
@@ -43,7 +43,7 @@ output_file.write("\n")
 output_file.write("IP Address of Machine: " + ip_addr + "\n")
 
 output_file.close()
-output_path = "result.txt"
+output_path = "./output/result.txt"
 
 # 4g: Upon running your container, it should do all the above stated steps and print the information on console from
 #     result.txt file and exit
